@@ -1,6 +1,8 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 
 const CUSTOMER_URL = process.env.CUSTOMER_URL || 'http://customer-service:8080';
